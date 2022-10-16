@@ -1,0 +1,22 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "laboratory work 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlexiyRedko/lab1.git"
+  },
+  "keywords": [
+    "lab"
+  ],
+  "author": "Redko Oleksii <1chelovechek@ukr.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlexiyRedko/lab1/issues"
+  },
+  "homepage": "https://github.com/OlexiyRedko/lab1#readme"
+}
