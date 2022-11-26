@@ -1,3 +1,3 @@
-import handler from "./api/function1.js";
+const handler = require("./api/function1.js")
 
 handler()
