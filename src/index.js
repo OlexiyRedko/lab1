@@ -1,15 +1,15 @@
 import router from './router.js'
 import defaultHandler from './defaultHandler.js'
-// import helpers from './helpers.js';
 // import safeJSON from './utils.js';
 import * as http from 'node:http'
+import helpers from './helpers.js'
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url || '/', `https://${req.headers.host}`)
   const routerModule = router.get(url.pathname) ?? {}
   const handler = routerModule[req?.method] ?? defaultHandler
 
-  handler(req, res)
+  handler(req, Object.assign(res, helpers))
 })
 
 server.listen(parseInt(process.env.PORT) || 8000)
