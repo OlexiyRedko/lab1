@@ -9,18 +9,21 @@ const __dirname = path.dirname(__filename)
 const baseDir = path.join(__dirname, 'routes')
 
 async function loadRoute(dirname, base) {
+  console.log('///' + dirname)
   const relPath = path.join(base, dirname)
   const workdir = path.join(baseDir, relPath)
 
   const directories = await readdir(workdir, { withFileTypes: true })
   for (const entry of directories) {
     if (entry.isDirectory()) {
-      return loadRoute(entry.name, relPath)
+      console.log('/' + entry.name)
+      await loadRoute(entry.name, relPath)
     } else if (
       entry.isFile() &&
       path.extname(entry.name) === '.js' &&
       path.basename(entry.name, '.js') === 'index'
     ) {
+      console.log(entry.name)
       const modulePath = pathToFileURL(path.join(workdir, entry.name))
       const module = await import(modulePath)
       router.set(relPath.replaceAll(path.set, '/'), { ...module })
