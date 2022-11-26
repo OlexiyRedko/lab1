@@ -1,5 +1,5 @@
 import server from "../src/server.js";
 
-export default function handler(req, res) {
-  server(req, res)
+export default function handler() {
+  server()
 }
