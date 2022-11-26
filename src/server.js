@@ -13,7 +13,7 @@ const processedContentTypes = {
   },
 };
 
-const server = http.createServer(async (req, res) => {
+export default server = http.createServer(async (req, res) => {
   const url = new URL(req.url || '/', `https://${req.headers.host}`);
   const routerModule = router.get(url.pathname) ?? {};
   const handler = routerModule[req?.method] ?? defaultHandler;
