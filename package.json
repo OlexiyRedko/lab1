@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "laboratory work 2",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "node ./api/function1.js",
     "test": "echo \"Error: no test specified\" && exit 1",
