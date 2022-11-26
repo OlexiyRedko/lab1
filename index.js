@@ -1,3 +1,5 @@
-const handler = require("./api/function1.js")
+import server from "./src/server.js";
 
-export default handler = () =>{handler()}
+export default function handler() {
+  server()
+}
