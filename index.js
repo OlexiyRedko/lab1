@@ -1,3 +1,3 @@
 const handler = require("./api/function1.js")
 
-export default serv = () =>{handler()}
+export default handler = () =>{handler()}
