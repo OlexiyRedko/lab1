@@ -1,5 +1,3 @@
 import server from "./src/server.js";
 
-export default function handler() {
-  server()
-}
+export default server
